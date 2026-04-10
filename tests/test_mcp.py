@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from injectionguard.mcp import MCPServer, TOOLS, run_server
+from injectionguard.mcp import MCPServer
 
 
 @pytest.fixture

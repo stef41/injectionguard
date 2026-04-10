@@ -1,6 +1,5 @@
 """Tests for heuristic detection strategy."""
 
-import pytest
 from injectionguard.detector import detect, ThreatLevel
 
 

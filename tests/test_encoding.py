@@ -1,8 +1,7 @@
 """Tests for encoding detection strategy."""
 
 import base64
-import pytest
-from injectionguard.detector import detect, Detector, ThreatLevel
+from injectionguard.detector import detect
 
 
 class TestBase64:

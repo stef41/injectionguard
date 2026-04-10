@@ -1,6 +1,5 @@
 """Tests for structural detection strategy."""
 
-import pytest
 from injectionguard.detector import detect, ThreatLevel
 
 

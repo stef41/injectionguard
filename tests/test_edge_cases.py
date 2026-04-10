@@ -1,7 +1,6 @@
 """Integration and edge case tests."""
 
-import pytest
-from injectionguard import detect, is_safe, Detector, ThreatLevel
+from injectionguard import detect, is_safe, ThreatLevel
 
 
 class TestEdgeCases:

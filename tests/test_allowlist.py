@@ -1,6 +1,5 @@
 """Tests for allowlist and blocklist features."""
 
-import pytest
 from injectionguard.detector import Detector
 from injectionguard.types import ThreatLevel
 

@@ -1,6 +1,5 @@
 """Tests for the core detector."""
 
-import pytest
 from injectionguard.detector import (
     Detector, DetectionResult, Detection, ThreatLevel,
     detect, is_safe,

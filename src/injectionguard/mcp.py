@@ -6,8 +6,7 @@ import json
 import sys
 from typing import Any
 
-from injectionguard.detector import Detector, detect, is_safe
-from injectionguard.types import ThreatLevel
+from injectionguard.detector import detect, is_safe
 
 
 TOOLS = [

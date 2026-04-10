@@ -1,6 +1,5 @@
 """Tests for injectionguard.rate module."""
 
-import pytest
 
 from injectionguard.rate import (
     DetectionEvent,
