@@ -25,13 +25,28 @@ class Detector:
         self,
         strategies: Optional[list] = None,
         threshold: ThreatLevel = ThreatLevel.LOW,
+        allow_list: Optional[list[str]] = None,
+        block_list: Optional[list[str]] = None,
     ):
         self.strategies = strategies or ALL_STRATEGIES
         self.threshold = threshold
+        self.allow_list: list[str] = allow_list or []
+        self.block_list: list[str] = block_list or []
 
     def scan(self, text: str) -> DetectionResult:
         """Scan text for prompt injection patterns."""
         result = DetectionResult(text=text)
+
+        # Block list: always flag these patterns
+        for pattern in self.block_list:
+            for match in re.finditer(re.escape(pattern), text, re.IGNORECASE):
+                result.detections.append(Detection(
+                    strategy="blocklist",
+                    pattern=pattern,
+                    threat_level=ThreatLevel.CRITICAL,
+                    message=f"Blocklisted pattern: '{pattern}'",
+                    offset=match.start(),
+                ))
 
         for strategy in self.strategies:
             try:
@@ -45,6 +60,15 @@ class Detector:
             d for d in result.detections
             if LEVEL_ORDER.index(d.threat_level) >= threshold_idx
         ]
+
+        # Allow list: remove detections that match allowed patterns
+        if self.allow_list:
+            result.detections = [
+                d for d in result.detections
+                if not any(allowed.lower() in d.message.lower() for allowed in self.allow_list)
+                and d.strategy != "blocklist"  # never allow blocklisted
+                or d.strategy == "blocklist"
+            ]
 
         return result
 
