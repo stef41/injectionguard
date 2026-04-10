@@ -150,17 +150,17 @@ Part of the **stef41 LLM toolkit** — open-source tools for every stage of the 
 
 | Project | What it does |
 |---------|-------------|
-| [tokonomics](https://github.com/stef41/tokonomics) | Token counting & cost management for LLM APIs |
-| [datacrux](https://github.com/stef41/datacrux) | Training data quality — dedup, PII, contamination |
+| [tokonomics](https://github.com/stef41/tokonomix) | Token counting & cost management for LLM APIs |
+| [datacrux](https://github.com/stef41/datacruxai) | Training data quality — dedup, PII, contamination |
 | [castwright](https://github.com/stef41/castwright) | Synthetic instruction data generation |
 | [datamix](https://github.com/stef41/datamix) | Dataset mixing & curriculum optimization |
 | [toksight](https://github.com/stef41/toksight) | Tokenizer analysis & comparison |
 | [trainpulse](https://github.com/stef41/trainpulse) | Training health monitoring |
-| [ckpt](https://github.com/stef41/ckpt) | Checkpoint inspection, diffing & merging |
-| [quantbench](https://github.com/stef41/quantbench) | Quantization quality analysis |
+| [ckpt](https://github.com/stef41/ckptkit) | Checkpoint inspection, diffing & merging |
+| [quantbench](https://github.com/stef41/quantbenchx) | Quantization quality analysis |
 | [infermark](https://github.com/stef41/infermark) | Inference benchmarking |
-| [modeldiff](https://github.com/stef41/modeldiff) | Behavioral regression testing |
-| [vibesafe](https://github.com/stef41/vibesafe) | AI-generated code safety scanner |
+| [modeldiff](https://github.com/stef41/modeldiffx) | Behavioral regression testing |
+| [vibesafe](https://github.com/stef41/vibesafex) | AI-generated code safety scanner |
 
 ## License
 
