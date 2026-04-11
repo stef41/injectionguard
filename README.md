@@ -4,6 +4,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/injectionguard.svg)](https://pypi.org/project/injectionguard/)
+[![Downloads](https://img.shields.io/pypi/dm/injectionguard)](https://pypi.org/project/injectionguard/)
 
 **Detect prompt injection attacks before they reach your LLM.**
 
