@@ -128,7 +128,8 @@ class MCPServer:
     def _tool_scan_mcp(self, req_id: Any, arguments: dict[str, Any]) -> dict[str, Any]:
         output = arguments.get("output", "")
         tool_name = arguments.get("tool_name", "unknown")
-        result = detect(output)
+        from injectionguard.detector import Detector
+        result = Detector().scan_mcp_output(tool_name, output)
         result_data = {
             "tool_name": tool_name,
             "is_safe": result.is_safe,

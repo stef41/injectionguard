@@ -2,8 +2,11 @@
 
 from __future__ import annotations
 
+import logging
 import re
 from typing import Optional
+
+_log = logging.getLogger("injectionguard")
 
 from injectionguard.types import Detection, DetectionResult, ThreatLevel, LEVEL_ORDER
 from injectionguard.strategies.heuristic import check_heuristic
@@ -52,8 +55,8 @@ class Detector:
             try:
                 detections = strategy(text)
                 result.detections.extend(detections)
-            except Exception:
-                pass
+            except Exception as exc:
+                _log.warning("Strategy %s failed: %s", getattr(strategy, '__name__', strategy), exc)
 
         threshold_idx = LEVEL_ORDER.index(self.threshold)
         result.detections = [
