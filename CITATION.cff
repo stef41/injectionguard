@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use injectionguard in your research, please cite it as below."
+type: software
+title: "injectionguard"
+abstract: "Detect prompt injection attacks before they reach your LLM."
+authors:
+  - family-names: "B"
+    given-names: "Zacharie"
+    alias: "stef41"
+version: "0.3.0"
+date-released: "2026-04-11"
+license: Apache-2.0
+url: "https://github.com/stef41/injectionguard"
+repository-code: "https://github.com/stef41/injectionguard"
+keywords:
+  - prompt-injection
+  - llm-security
+  - owasp
+  - python
